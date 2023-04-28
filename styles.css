@@ -1,5 +1,18 @@
 * {
+    /* border: 2px solid lightblue; */
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+    background-image: url(./images/background-wanderer.png);
+}
+
+h1,p {
+    color: chocolate;
+}
+
+a:visited{
+    color: chocolate;
 }
 
 img {
@@ -12,13 +25,19 @@ img:hover{
     width: auto;
 }
 
+.project-img {
+    border: 3px solid black;
+    /* border-color: blue; */
+}
+
 .center {
     text-align: center;
+    margin: 20px;
 }
 
 div {
     text-align: center;
-    background-color:azure;
+    /* background-color:azure; */
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -29,4 +48,9 @@ ul {
     margin: 0 auto;
     margin-left: 35%;
     /* margin-right: 35%; */
+}
+
+.inl{
+    display: inline-block;
+    
 }
