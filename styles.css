@@ -5,26 +5,31 @@
     /* padding: 3px; */
 }
 
+
 /* Type selectors */
 h1, p, a {
     color: #ffd28c;
     text-shadow: 0.5px 0.5px #ad8e5b;
-    /* box-shadow: 2px 2px black; */
-
 }
 
 h1, p {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
-
-/* p, em {
-    flex-wrap:wrap;
-} */
 
 a:visited{
     color: #ffd28c;
 }
+
+ul {
+    text-align: left;
+    display: table;
+    margin: 0 auto;
+    margin-left: 35%;
+    /* margin-right: 35%; */
+}
+
 
 /* Class selectors */
 .background-img {
@@ -42,38 +47,55 @@ a:visited{
     display: flex;   
 }
 
-.container > div {
-    flex: 1 1 100%;
+.third {
+    width: 100px;
+    flex: 1 1 33.33%;
 }
 
-.link-box { 
-    justify-content: flex-end;
-}
-
-.container > .link {
-    flex: 1 1 75%;
-}
-
-.link {
-
-    text-align: center;
-    align-self:flex-end;
-    padding-bottom: 20px;
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 .title-box{
-    display: flex;
     flex-direction: column;
+    width: 200px;
 
 }
 
+.link-box { 
+    flex-direction: row;
+    justify-content: flex-end;  /* right */
+    align-self: flex-end;       /* bottom */
+}
+
+@media screen and (max-width: 500px) {
+    .link-box { 
+        flex-direction: column;     /* column if screen < 500*/
+        justify-content: space-around;  /* right */
+        align-self:center;       /* center */
+    }
+  }
+
+.link {
+    width: 100px;
+    flex: 0 1 auto;
+    align-self:flex-end;
+
+    text-align: center;
+    
+    padding-bottom: 20px;
+}
+
+
+/* PROJECT THUMBNAILS */
 .projects-box {
-    display: flex;
     margin-top: 30px;
     justify-content:center;
+    align-items: flex-end;
     flex-wrap: wrap;
 }
-
 
 .project-img {
     height: 200px;
@@ -96,12 +118,4 @@ a:visited{
 
     box-sizing: border-box;
     padding: 5px;
-}
-
-ul {
-    text-align: left;
-    display: table;
-    margin: 0 auto;
-    margin-left: 35%;
-    /* margin-right: 35%; */
 }
